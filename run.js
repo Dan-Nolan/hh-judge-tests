@@ -2,7 +2,7 @@ const axios = require('axios');
 const JSZip = require('jszip');
 const fs = require('fs');
 
-const host = "http://34.125.53.86:2358/";
+const host = "";
 const setupContents = fs.readFileSync("./setup.js").toString();
 const testContents = fs.readFileSync("./test/sample-test.js").toString();
 const hardhatContents = fs.readFileSync("./hardhat.config.js").toString();
