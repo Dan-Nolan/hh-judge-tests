@@ -39,7 +39,7 @@ function formatStream(outputStream) {
             const response = await axios.get(fetchURL);
 
             const { data: { status, stdout, stderr } } = response;
-            
+
             if (status.id > 2) {
                 if (stderr) {
                     console.log(formatStream(stderr));
@@ -55,3 +55,11 @@ function formatStream(outputStream) {
         console.log(ex.message);
     }
 })();
+
+function atob(a) {
+    return Buffer.from(a, 'base64').toString('binary');
+}
+
+function btoa(a) {
+    return Buffer.from(a, 'binary').toString('base64')
+}
